@@ -80,7 +80,7 @@ Most LeetCode trackers send your data to remote servers, require accounts, or lo
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│              Chrome Extension Service Worker                     │
+│              Chrome Extension Service Worker                    │
 │  ┌───────────────────────────────────────────────────────────┐  │
 │  │  background.ts                                            │  │
 │  │  • Receives PROBLEM_SOLVED from content script            │  │
@@ -92,7 +92,7 @@ Most LeetCode trackers send your data to remote servers, require accounts, or lo
               │                                    │
               ▼                                    ▼
 ┌──────────────────────┐            ┌──────────────────────────┐
-│     GitHub API       │            │   localhost:4321          │
+│     GitHub API       │            │   localhost:4321         │
 │  PUT solution files  │            │   POST /api/sync         │
 │                      │            │                          │
 │  (ONLY external      │            │  Astro + Node.js SSR     │
