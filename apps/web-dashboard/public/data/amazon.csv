@@ -1,0 +1,16 @@
+problem_id,title,difficulty,topics,companies,url,frequency
+1,Two Sum,Easy,Array;Hash Table,Amazon;Google;Meta,https://leetcode.com/problems/two-sum/,95
+2,Add Two Numbers,Medium,Linked List;Math;Recursion,Amazon;Microsoft;Google,https://leetcode.com/problems/add-two-numbers/,80
+3,Longest Substring Without Repeating Characters,Medium,Hash Table;String;Sliding Window,Amazon;Google;Meta,https://leetcode.com/problems/longest-substring-without-repeating-characters/,90
+5,Longest Palindromic Substring,Medium,String;Dynamic Programming,Amazon;Microsoft;Google,https://leetcode.com/problems/longest-palindromic-substring/,78
+11,Container With Most Water,Medium,Array;Two Pointers;Greedy,Amazon;Google;Meta,https://leetcode.com/problems/container-with-most-water/,82
+17,Letter Combinations of a Phone Number,Medium,Hash Table;String;Backtracking,Amazon;Google;Meta,https://leetcode.com/problems/letter-combinations-of-a-phone-number/,75
+33,Search in Rotated Sorted Array,Medium,Array;Binary Search,Amazon;Google;Microsoft,https://leetcode.com/problems/search-in-rotated-sorted-array/,85
+53,Maximum Subarray,Medium,Array;Divide and Conquer;Dynamic Programming,Amazon;Google;Apple,https://leetcode.com/problems/maximum-subarray/,88
+70,Climbing Stairs,Easy,Math;Dynamic Programming;Memoization,Amazon;Google;Apple,https://leetcode.com/problems/climbing-stairs/,85
+98,Validate Binary Search Tree,Medium,Tree;DFS;BST,Amazon;Google;Meta,https://leetcode.com/problems/validate-binary-search-tree/,80
+102,Binary Tree Level Order Traversal,Medium,Tree;BFS,Amazon;Google;Microsoft,https://leetcode.com/problems/binary-tree-level-order-traversal/,82
+146,LRU Cache,Medium,Hash Table;Linked List;Design,Amazon;Google;Meta,https://leetcode.com/problems/lru-cache/,90
+153,Find Minimum in Rotated Sorted Array,Medium,Array;Binary Search,Amazon;Google;Microsoft,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/,78
+297,Serialize and Deserialize Binary Tree,Hard,Tree;DFS;BFS;Design,Amazon;Google;Meta,https://leetcode.com/problems/serialize-and-deserialize-binary-tree/,72
+322,Coin Change,Medium,Array;Dynamic Programming;BFS,Amazon;Google;Microsoft,https://leetcode.com/problems/coin-change/,85

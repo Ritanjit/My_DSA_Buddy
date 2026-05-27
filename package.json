@@ -1,0 +1,23 @@
+{
+  "name": "my-dsa-buddy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:web": "turbo dev --filter=@my-dsa-buddy/web-dashboard",
+    "dev:ext": "turbo dev --filter=@my-dsa-buddy/chrome-extension",
+    "build": "turbo build",
+    "build:web": "turbo build --filter=@my-dsa-buddy/web-dashboard",
+    "build:ext": "turbo build --filter=@my-dsa-buddy/chrome-extension",
+    "start:local": "node apps/web-dashboard/dist/server/entry.mjs",
+    "package:ext": "cd apps/chrome-extension && pnpm build && cd dist && zip -r ../../my-dsa-buddy-extension.zip .",
+    "typecheck": "turbo typecheck",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

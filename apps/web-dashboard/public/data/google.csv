@@ -1,0 +1,16 @@
+problem_id,title,difficulty,topics,companies,url,frequency
+1,Two Sum,Easy,Array;Hash Table,Google;Amazon;Meta,https://leetcode.com/problems/two-sum/,95
+15,3Sum,Medium,Array;Two Pointers;Sorting,Google;Amazon;Meta,https://leetcode.com/problems/3sum/,88
+20,Valid Parentheses,Easy,String;Stack,Google;Amazon;Meta,https://leetcode.com/problems/valid-parentheses/,90
+21,Merge Two Sorted Lists,Easy,Linked List;Recursion,Google;Amazon;Microsoft,https://leetcode.com/problems/merge-two-sorted-lists/,85
+23,Merge k Sorted Lists,Hard,Linked List;Divide and Conquer;Heap,Google;Amazon;Meta,https://leetcode.com/problems/merge-k-sorted-lists/,80
+42,Trapping Rain Water,Hard,Array;Two Pointers;Stack;Dynamic Programming,Google;Amazon;Microsoft,https://leetcode.com/problems/trapping-rain-water/,85
+49,Group Anagrams,Medium,Array;Hash Table;String;Sorting,Google;Amazon;Meta,https://leetcode.com/problems/group-anagrams/,82
+56,Merge Intervals,Medium,Array;Sorting,Google;Amazon;Meta,https://leetcode.com/problems/merge-intervals/,88
+76,Minimum Window Substring,Hard,Hash Table;String;Sliding Window,Google;Amazon;Meta,https://leetcode.com/problems/minimum-window-substring/,75
+121,Best Time to Buy and Sell Stock,Easy,Array;Dynamic Programming,Google;Amazon;Meta,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,92
+127,Word Ladder,Hard,Hash Table;String;BFS,Google;Amazon;Meta,https://leetcode.com/problems/word-ladder/,70
+200,Number of Islands,Medium,Array;DFS;BFS;Union Find,Google;Amazon;Microsoft,https://leetcode.com/problems/number-of-islands/,90
+206,Reverse Linked List,Easy,Linked List;Recursion,Google;Amazon;Apple,https://leetcode.com/problems/reverse-linked-list/,88
+215,Kth Largest Element in an Array,Medium,Array;Divide and Conquer;Sorting;Heap,Google;Amazon;Meta,https://leetcode.com/problems/kth-largest-element-in-an-array/,85
+238,Product of Array Except Self,Medium,Array;Prefix Sum,Google;Amazon;Apple,https://leetcode.com/problems/product-of-array-except-self/,82

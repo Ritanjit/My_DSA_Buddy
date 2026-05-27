@@ -1,0 +1,19 @@
+---
+---
+
+<script is:inline>
+(function() {
+  var STORAGE_KEY = 'dsabuddy-theme';
+  var stored = null;
+  try { stored = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+
+  var mode = (stored === 'light' || stored === 'dark' || stored === 'system') ? stored : 'light';
+  var resolved = mode;
+
+  if (mode === 'system') {
+    resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  document.documentElement.setAttribute('data-theme', resolved);
+})();
+</script>

@@ -1,0 +1,40 @@
+---
+import ThemeInit from '../components/react/theme-toggle/ThemeInit.astro';
+import LenisScroll from '../components/LenisScroll.astro';
+import FloatingNavbar from '../components/react/navbar/FloatingNavbar';
+import ProfessionalFooter from '../components/react/sections/ProfessionalFooter';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'My DSA Buddy', description = 'Track your DSA journey — offline, private, open source.' } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <ThemeInit />
+  </head>
+  <body class="bg-canvas text-ink min-h-screen flex flex-col">
+    <FloatingNavbar client:load initialPath={currentPath} />
+
+    <main class="flex-1 relative z-10">
+      <slot />
+    </main>
+
+    <ProfessionalFooter client:visible />
+    <LenisScroll />
+  </body>
+</html>
+
+<style is:global>
+  @import '../globals.css';
+</style>

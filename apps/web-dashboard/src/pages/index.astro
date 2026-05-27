@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LandingHero from '../components/react/hero/LandingHero';
+import FeatureShowcase from '../components/react/sections/FeatureShowcase';
+import HowItWorks from '../components/react/sections/HowItWorks';
+---
+
+<BaseLayout title="My DSA Buddy — Track Your DSA Journey">
+  <LandingHero client:load />
+  <HowItWorks client:visible />
+  <FeatureShowcase client:visible />
+</BaseLayout>

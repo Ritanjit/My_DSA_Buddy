@@ -1,0 +1,16 @@
+problem_id,title,difficulty,topics,companies,url,frequency
+1,Two Sum,Easy,Array;Hash Table,Meta;Google;Amazon,https://leetcode.com/problems/two-sum/,95
+4,Median of Two Sorted Arrays,Hard,Array;Binary Search;Divide and Conquer,Meta;Google;Amazon,https://leetcode.com/problems/median-of-two-sorted-arrays/,75
+10,Regular Expression Matching,Hard,String;Dynamic Programming;Recursion,Meta;Google;Amazon,https://leetcode.com/problems/regular-expression-matching/,65
+23,Merge k Sorted Lists,Hard,Linked List;Divide and Conquer;Heap,Meta;Google;Amazon,https://leetcode.com/problems/merge-k-sorted-lists/,80
+31,Next Permutation,Medium,Array;Two Pointers,Meta;Google;Amazon,https://leetcode.com/problems/next-permutation/,72
+46,Permutations,Medium,Array;Backtracking,Meta;Google;Amazon,https://leetcode.com/problems/permutations/,78
+56,Merge Intervals,Medium,Array;Sorting,Meta;Google;Amazon,https://leetcode.com/problems/merge-intervals/,88
+71,Simplify Path,Medium,String;Stack,Meta;Google;Amazon,https://leetcode.com/problems/simplify-path/,70
+78,Subsets,Medium,Array;Backtracking;Bit Manipulation,Meta;Google;Amazon,https://leetcode.com/problems/subsets/,80
+124,Binary Tree Maximum Path Sum,Hard,Tree;DFS;Dynamic Programming,Meta;Google;Amazon,https://leetcode.com/problems/binary-tree-maximum-path-sum/,75
+133,Clone Graph,Medium,Hash Table;DFS;BFS;Graph,Meta;Google;Amazon,https://leetcode.com/problems/clone-graph/,78
+236,Lowest Common Ancestor of a Binary Tree,Medium,Tree;DFS,Meta;Google;Amazon,https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/,85
+253,Meeting Rooms II,Medium,Array;Two Pointers;Greedy;Sorting;Heap,Meta;Google;Amazon,https://leetcode.com/problems/meeting-rooms-ii/,88
+301,Remove Invalid Parentheses,Hard,String;BFS;Backtracking,Meta;Google;Amazon,https://leetcode.com/problems/remove-invalid-parentheses/,72
+543,Diameter of Binary Tree,Easy,Tree;DFS,Meta;Google;Amazon,https://leetcode.com/problems/diameter-of-binary-tree/,82
