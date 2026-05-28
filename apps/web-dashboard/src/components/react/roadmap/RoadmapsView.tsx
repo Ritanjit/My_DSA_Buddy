@@ -131,6 +131,7 @@ export default function RoadmapsView() {
             { value: '', label: 'All Companies' },
             ...companies.map((c) => ({ value: c, label: c })),
           ]}
+          maxDropdownWidth={180}
         />
 
         <button

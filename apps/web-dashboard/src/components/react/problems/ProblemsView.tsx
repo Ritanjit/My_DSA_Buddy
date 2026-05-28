@@ -148,12 +148,14 @@ export default function ProblemsView() {
             { value: '', label: 'All Difficulties' },
             ...DIFFICULTIES.map((d) => ({ value: d, label: d })),
           ]}
+          maxDropdownWidth={180}
         />
 
         <CustomSelect
           value={status}
           onChange={(v) => setStatus(v as ProblemStatus | '')}
           options={STATUSES.map((s) => ({ value: s.value, label: s.label }))}
+          maxDropdownWidth={180}
         />
 
         <CustomSelect
@@ -173,6 +175,7 @@ export default function ProblemsView() {
             { value: '', label: 'All Companies' },
             ...allCompanies.map((c) => ({ value: c, label: c })),
           ]}
+          maxDropdownWidth={180}
         />
       </div>
 

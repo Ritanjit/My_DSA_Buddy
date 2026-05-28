@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="#features">Features</a> •
+  <a href="#screenshots">Screenshots</a> •
   <a href="#architecture">Architecture</a> •
   <a href="#getting-started">Getting Started</a> •
   <a href="#tech-stack">Tech Stack</a> •
@@ -60,6 +61,43 @@ Most LeetCode trackers send your data to remote servers, require accounts, or lo
 | **Dashboard Sync** | Pings localhost to update your local database in real-time |
 | **Bulk Sync** | "Sync All Solved to GitHub" button for batch operations |
 | **Popup Stats** | Quick view of Easy/Medium/Hard counts and streak |
+
+---
+
+## User Interface (Dark Mode Samples)
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="apps/web-dashboard/public/assets/ui_samples/home.png" alt="My DSA Buddy - Home page" width="100%" />
+      <p align="center"><em>Home</em></p>
+    </td>
+    <td width="50%">
+      <img src="apps/web-dashboard/public/assets/ui_samples/dashboard.png" alt="My DSA Buddy - Dashboard with progress tracking" width="100%" />
+      <p align="center"><em>Dashboard</em></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="apps/web-dashboard/public/assets/ui_samples/roadmaps.png" alt="My DSA Buddy - Company roadmaps" width="100%" />
+      <p align="center"><em>Roadmaps</em></p>
+    </td>
+    <td width="50%">
+      <img src="apps/web-dashboard/public/assets/ui_samples/problems.png" alt="My DSA Buddy - Problem browser" width="100%" />
+      <p align="center"><em>Problems</em></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="apps/web-dashboard/public/assets/ui_samples/settings.png" alt="My DSA Buddy - Settings page" width="100%" />
+      <p align="center"><em>Settings</em></p>
+    </td>
+    <td width="50%">
+      <img src="apps/web-dashboard/public/assets/ui_samples/documentation.png" alt="My DSA Buddy - Documentation page" width="100%" />
+      <p align="center"><em>Documentation</em></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
