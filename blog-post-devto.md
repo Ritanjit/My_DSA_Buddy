@@ -51,27 +51,25 @@ When you solve a problem, the extension scrapes the solution, pushes it to your 
 This is a **pnpm monorepo** with Turborepo orchestration. Here's the sync flow:
 
 ```
-┌─────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  LeetCode   │    │   Content    │    │  Background   │    │    Local     │
-│  Page DOM   │    │   Script     │    │  Worker       │    │  Dashboard   │
-└──────┬──────┘    └──────┬───────┘    └──────┬────────┘    └──────┬───────┘
-       │                  │                   │                    │
-       │ "Accepted" shown │                   │                    │
-       │─────────────────>│                   │                    │
-       │                  │ chrome.runtime    │                    │
-       │                  │ .sendMessage()    │                    │
-       │                  │──────────────────>│                    │
-       │                  │                   │                    │
-       │                  │                   │── GitHub API ──> (ONLY external call)
-       │                  │                   │   PUT solution     │
-       │                  │                   │<── 201 Created ────│
-       │                  │                   │                    │
-       │                  │                   │ POST localhost:4321│
-       │                  │                   │ /api/sync          │
-       │                  │                   │───────────────────>│
-       │                  │                   │                    │ Update SQLite
-       │                  │                   │                    │ Recalculate stats
-       │                  │                   │<───────────────────│ 200 OK
+┌───────────┐  ┌─────────┐  ┌────────────┐  ┌───────────┐
+│ LeetCode  │  │ Content │  │ Background │  │   Local   │
+│  Page DOM │  │  Script │  │   Worker   │  │ Dashboard │
+└─────┬─────┘  └────┬────┘  └─────┬──────┘  └─────┬─────┘
+      │              │             │               │
+      │ "Accepted"   │             │               │
+      │─────────────>│             │               │
+      │              │ sendMessage │               │
+      │              │────────────>│               │
+      │              │             │               │
+      │              │             │─ GitHub API ─>│(ONLY external call)
+      │              │             │  PUT solution │
+      │              │             │<─ 201 ────────│
+      │              │             │               │
+      │              │             │ POST /api/sync│
+      │              │             │──────────────>│
+      │              │             │               │ Update SQLite
+      │              │             │               │ Recalculate stats
+      │              │             │<──────────────│ 200 OK
 ```
 
 ### Tech Stack

@@ -135,25 +135,15 @@ export default function FloatingNavbar({ initialPath = '/' }: Props) {
             className="flex items-center hover:opacity-80 transition-opacity z-[60]"
             style={{ gap: `${sizes.logoGap}px` }}
           >
-            <div
-              className="rounded-lg flex items-center justify-center flex-shrink-0"
+            <img
+              src="/assets/logo/icon-48.png"
+              alt="My DSA Buddy"
+              className="rounded-lg flex-shrink-0"
               style={{
                 height: `${sizes.logoSize}px`,
                 width: `${sizes.logoSize}px`,
-                backgroundColor: '#cc785c',
               }}
-            >
-              <span
-                style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: `${sizes.logoSize * 0.5}px`,
-                  fontWeight: 700,
-                  color: '#ffffff',
-                }}
-              >
-                D
-              </span>
-            </div>
+            />
             <span
               style={{
                 fontFamily: 'var(--font-body)',

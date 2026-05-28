@@ -26,6 +26,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const allowed: (keyof UserSettings)[] = [
     'githubPat', 'githubRepo', 'githubBranch',
+    'githubUsername', 'leetcodeUsername',
     'syncOnSolve', 'theme', 'solutionFormat', 'solutionPath',
   ];
 

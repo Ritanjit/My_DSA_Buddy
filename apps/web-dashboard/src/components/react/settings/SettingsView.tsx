@@ -5,6 +5,8 @@ interface Settings {
   githubPat: string;
   githubRepo: string;
   githubBranch: string;
+  githubUsername: string;
+  leetcodeUsername: string;
   syncOnSolve: boolean;
   theme: 'light' | 'dark' | 'system';
   solutionFormat: 'markdown' | 'code-only';
@@ -15,6 +17,8 @@ const defaultSettings: Settings = {
   githubPat: '',
   githubRepo: '',
   githubBranch: 'main',
+  githubUsername: '',
+  leetcodeUsername: '',
   syncOnSolve: true,
   theme: 'light',
   solutionFormat: 'markdown',
@@ -226,6 +230,42 @@ export default function SettingsView() {
               <li>Copy and paste below</li>
             </ol>
             <p className="mt-2">Repository format: <code className="font-mono bg-[var(--color-surface-soft)] px-1 rounded">username/repo-name</code></p>
+          </div>
+        </div>
+      </section>
+
+      {/* Profiles */}
+      <section className="py-8 border-b border-[var(--color-hairline)]">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_220px] gap-6">
+          <div>
+            <h2 className="font-display text-ink text-lg">Profiles</h2>
+            <p className="text-sm text-muted mt-1">Your usernames for contribution graph embeds on the Dashboard.</p>
+          </div>
+          <div className="space-y-5">
+            <div>
+              <label className="block text-sm font-medium text-ink mb-1.5">GitHub Username</label>
+              <input
+                type="text"
+                value={settings.githubUsername || ''}
+                onChange={(e) => setSettings({ ...settings, githubUsername: e.target.value })}
+                placeholder="octocat"
+                className="w-full h-10 px-3 rounded-[var(--radius-md)] text-sm font-mono bg-[var(--color-surface-soft)] border border-[var(--color-hairline)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-soft)] outline-none focus:border-[var(--color-primary)]"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-ink mb-1.5">LeetCode Username</label>
+              <input
+                type="text"
+                value={settings.leetcodeUsername || ''}
+                onChange={(e) => setSettings({ ...settings, leetcodeUsername: e.target.value })}
+                placeholder="leetcoder123"
+                className="w-full h-10 px-3 rounded-[var(--radius-md)] text-sm font-mono bg-[var(--color-surface-soft)] border border-[var(--color-hairline)] text-[var(--color-ink)] placeholder:text-[var(--color-muted-soft)] outline-none focus:border-[var(--color-primary)]"
+              />
+            </div>
+          </div>
+          <div className="text-xs text-muted space-y-2 md:border-l md:border-[var(--color-hairline)] md:pl-4">
+            <p>Used to display your LeetCode and GitHub contribution graphs on the Dashboard Activity widget.</p>
+            <p>These are public usernames — no tokens needed.</p>
           </div>
         </div>
       </section>

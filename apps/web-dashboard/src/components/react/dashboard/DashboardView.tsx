@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Trash2 } from 'lucide-react';
 import { useProgress, useProblems } from '../../../hooks/useDashboard';
 import ProgressOverview from './ProgressOverview';
@@ -10,10 +10,18 @@ import RecentActivity from './RecentActivity';
 export default function DashboardView() {
   const { stats, progress, loading: statsLoading } = useProgress();
   const { problems, loading: problemsLoading } = useProblems();
+  const [profileSettings, setProfileSettings] = useState<{ githubUsername?: string; leetcodeUsername?: string }>({});
   const [showClearConfirm, setShowClearConfirm] = useState(false);
   const [showFinalConfirm, setShowFinalConfirm] = useState(false);
   const [clearing, setClearing] = useState(false);
   const [clearMessage, setClearMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('/api/settings')
+      .then((r) => r.json())
+      .then((data) => setProfileSettings({ githubUsername: data.githubUsername, leetcodeUsername: data.leetcodeUsername }))
+      .catch(() => {});
+  }, []);
 
   async function handleClearRecords() {
     setClearing(true);
@@ -59,7 +67,11 @@ export default function DashboardView() {
 
         {/* Right column */}
         <div className="lg:col-span-8 space-y-6">
-          <StreakCalendar progress={progress} />
+          <StreakCalendar
+            progress={progress}
+            githubUsername={profileSettings.githubUsername}
+            leetcodeUsername={profileSettings.leetcodeUsername}
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CategoryBreakdown stats={stats} />
             <RecentActivity problems={problems} />

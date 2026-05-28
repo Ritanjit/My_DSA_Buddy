@@ -221,6 +221,8 @@ export function getSettings(): UserSettings {
     githubPat: map.githubPat || undefined,
     githubRepo: map.githubRepo || undefined,
     githubBranch: map.githubBranch || 'main',
+    githubUsername: map.githubUsername || undefined,
+    leetcodeUsername: map.leetcodeUsername || undefined,
     syncOnSolve: map.syncOnSolve === 'true',
     theme: (map.theme as UserSettings['theme']) || 'light',
     solutionFormat: (map.solutionFormat as UserSettings['solutionFormat']) || 'markdown',
@@ -306,34 +308,39 @@ function rowToProblem(row: Record<string, unknown>): Problem {
 function computeStreaks(dates: string[]): { currentStreak: number; longestStreak: number } {
   if (dates.length === 0) return { currentStreak: 0, longestStreak: 0 };
 
-  const sorted = [...dates].sort().reverse();
+  const sorted = [...new Set(dates)].sort().reverse();
   const today = new Date().toISOString().split('T')[0];
   const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
 
   let currentStreak = 0;
-  let longestStreak = 0;
-  let streak = 1;
-
   if (sorted[0] === today || sorted[0] === yesterday) {
     currentStreak = 1;
+    for (let i = 1; i < sorted.length; i++) {
+      const prev = new Date(sorted[i - 1]);
+      const curr = new Date(sorted[i]);
+      const diffDays = (prev.getTime() - curr.getTime()) / 86400000;
+      if (diffDays === 1) {
+        currentStreak++;
+      } else {
+        break;
+      }
+    }
   }
 
+  let longestStreak = 1;
+  let streak = 1;
   for (let i = 1; i < sorted.length; i++) {
     const prev = new Date(sorted[i - 1]);
     const curr = new Date(sorted[i]);
     const diffDays = (prev.getTime() - curr.getTime()) / 86400000;
-
     if (diffDays === 1) {
       streak++;
-      if (i === 1 || currentStreak > 0) currentStreak = streak;
     } else {
       streak = 1;
-      if (currentStreak === 0) currentStreak = 0;
     }
     longestStreak = Math.max(longestStreak, streak);
   }
 
-  longestStreak = Math.max(longestStreak, streak);
   return { currentStreak, longestStreak };
 }
 

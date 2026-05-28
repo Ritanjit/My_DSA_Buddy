@@ -35,12 +35,11 @@ export default function ProfessionalFooter() {
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center"
-                style={{ backgroundColor: 'var(--color-primary)' }}
-              >
-                <span className="font-mono text-base font-bold text-white">D</span>
-              </div>
+              <img
+                src="/assets/logo/icon-48.png"
+                alt="My DSA Buddy"
+                className="w-9 h-9 rounded-lg"
+              />
               <span
                 className="font-body text-sm font-semibold"
                 style={{ color: 'var(--color-on-dark)', letterSpacing: '0.04em' }}

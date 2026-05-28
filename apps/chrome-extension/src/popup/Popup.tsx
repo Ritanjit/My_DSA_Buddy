@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logoIcon from '../../icons/icon-48.png';
 import {
   getGithubSettings,
   setGithubSettings,
@@ -206,9 +207,7 @@ export default function Popup() {
     <div>
       {/* Header */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-        <div style={{ width: '28px', height: '28px', borderRadius: '7px', backgroundColor: '#cc785c', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ color: '#fff', fontWeight: 700, fontSize: '14px', fontFamily: 'monospace' }}>D</span>
-        </div>
+        <img src={logoIcon} alt="My DSA Buddy" style={{ width: '28px', height: '28px', borderRadius: '7px' }} />
         <div style={{ flex: 1 }}>
           <div style={{ fontSize: '13px', fontWeight: 600 }}>My DSA Buddy</div>
           <div style={{ fontSize: '10px', color: '#8e8b82' }}>LeetCode Progress Tracker</div>

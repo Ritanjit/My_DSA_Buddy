@@ -4,6 +4,8 @@ export interface UserSettings {
   githubPat?: string;
   githubRepo?: string;
   githubBranch: string;
+  githubUsername?: string;
+  leetcodeUsername?: string;
   syncOnSolve: boolean;
   theme: 'light' | 'dark' | 'system';
   solutionFormat: 'markdown' | 'code-only';
